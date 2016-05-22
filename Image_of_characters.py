@@ -13,7 +13,6 @@ pix = image.load()
 
 factor = int(input('factor:'))
 for j in range(height):
-	rouw = ''
 	for i in range(width):
 		a = pix[i, j][0]
 		b = pix[i, j][1]
@@ -32,7 +31,7 @@ del draw
 step = int(input('Шаг пикселей:'))
 softnes = int(input('Мягкость:'))
 for j in range(height//step):
-    rouw = ''
+    row = ''
     for i in range(width//step):
         c_1 = 0
         r = 0
@@ -56,14 +55,14 @@ for j in range(height//step):
                 r = 0
      
         if color_sum//(step**2) > (255/2+softnes):
-            rouw_app = simvols_b
+            row_app = simvols_b
         elif color_sum//(step**2) < (255/2-softnes):
-            rouw_app = simvols_a
+            row_app = simvols_a
         else:
-            rouw_app = simvols_c 
+            row_app = simvols_c 
         
-        rouw += rouw_app
+        row += row_app
         if i == width//step-1:
-            print(rouw)
+            print(rou)
         
     
