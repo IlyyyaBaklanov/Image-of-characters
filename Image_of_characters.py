@@ -63,6 +63,4 @@ for j in range(height//step):
         
         row += row_app
         if i == width//step-1:
-            print(rou)
-        
-    
+            print(row)
